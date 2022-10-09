@@ -90,8 +90,8 @@ export const Profile = () => {
                             <Card key={ game.id } gameId={ game.id }  
                                   homeTeam={ game.homeTeam } awayTeam={ game.awayTeam } 
                                   gameTime={ format( new Date(game.gameTime), "H:mm" ) }
-                                  homeTeamScore={ user?.hunches?.[game.id]?.homeTeamScore || '' } 
-                                  awayTeamScore={ user?.hunches?.[game.id]?.awayTeamScore || '' } 
+                                  homeTeamScore={ user?.hunches?.[game.id]?.homeTeamScore || 0 } 
+                                  awayTeamScore={ user?.hunches?.[game.id]?.awayTeamScore || 0 } 
                                   disabled={true}
                             />
                         ))}
